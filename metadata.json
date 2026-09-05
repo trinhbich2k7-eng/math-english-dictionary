@@ -1,0 +1,6 @@
+{
+  "name": "Math English Dictionary",
+  "description": "Từ điển Toán – Tiếng Anh trực quan dành cho học sinh tiểu học với phát âm chuẩn, hình minh họa sinh động và trò chơi học tập.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
