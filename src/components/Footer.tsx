@@ -58,16 +58,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab }) => {
               Games
             </button>
             <button
-              onClick={() => { onNavigateTab('favorites'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              onClick={() => { onNavigateTab('materials'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className="hover:text-amber-600 transition-colors"
             >
-              Favorites
+              Học liệu (Materials)
             </button>
             <button
               onClick={() => { onNavigateTab('teacher'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className="hover:text-amber-600 transition-colors"
             >
-              Teacher Corner
+              Góc Giáo viên
             </button>
             <button
               onClick={() => { onNavigateTab('stats'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}

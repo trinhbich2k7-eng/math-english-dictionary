@@ -365,6 +365,53 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </section>
 
+      {/* DUAL BANNER: TEACHER TOOLKIT & LEARNING MATERIALS */}
+      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Learning Materials Card */}
+        <div 
+          onClick={() => onNavigateTab('materials')}
+          className="cursor-pointer group bg-gradient-to-br from-emerald-500 to-teal-700 text-white rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between hover:scale-[1.01] transition-transform"
+        >
+          <div className="space-y-2.5">
+            <span className="inline-flex items-center gap-1.5 bg-white/20 text-xs font-extrabold px-3 py-1 rounded-full">
+              📚 Học liệu Sư phạm
+            </span>
+            <h3 className="font-heading text-2xl font-bold">
+              Học Liệu & Phiếu In A4
+            </h3>
+            <p className="text-emerald-100 text-xs sm:text-sm">
+              Flashcard trực quan, phiếu in cắt kéo A4 và chế độ trình chiếu Smartboard / máy chiếu cho lớp học.
+            </p>
+          </div>
+          <div className="pt-4 flex items-center gap-2 text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
+            <span>Khám phá kho học liệu</span>
+            <ArrowRight className="w-4 h-4" />
+          </div>
+        </div>
+
+        {/* Teacher Corner Card */}
+        <div 
+          onClick={() => onNavigateTab('teacher')}
+          className="cursor-pointer group bg-gradient-to-br from-indigo-600 to-purple-800 text-white rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between hover:scale-[1.01] transition-transform"
+        >
+          <div className="space-y-2.5">
+            <span className="inline-flex items-center gap-1.5 bg-white/20 text-xs font-extrabold px-3 py-1 rounded-full">
+              👩‍🏫 Dành cho Giáo viên & Trợ giảng
+            </span>
+            <h3 className="font-heading text-2xl font-bold">
+              Góc Giáo Viên Song Ngữ
+            </h3>
+            <p className="text-indigo-100 text-xs sm:text-sm">
+              Ngân hàng trọn bộ 230 câu lệnh tiếng Anh chuẩn (115 câu Toán & 115 câu Lớp học) kèm phiên âm IPA & audio.
+            </p>
+          </div>
+          <div className="pt-4 flex items-center gap-2 text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
+            <span>Vào góc giáo viên</span>
+            <ArrowRight className="w-4 h-4" />
+          </div>
+        </div>
+      </section>
+
       {/* QUICK GAME PROMO */}
       <section className="max-w-6xl mx-auto">
         <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl text-white p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
