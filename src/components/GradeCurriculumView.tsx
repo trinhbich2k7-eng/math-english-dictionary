@@ -31,18 +31,18 @@ export const GradeCurriculumView: React.FC<GradeCurriculumViewProps> = ({
 
   // Curriculum breakdown based on syllabus
   const grade1Subtopics = [
-    { id: 'Counting', title: 'Đếm số (Counting)', icon: '🔢', count: 5, desc: '5 từ: Count, Numbers, Digits, Sequence, Total' },
-    { id: 'Addition and Subtraction', title: 'Phép cộng & trừ (Addition & Subtraction)', icon: '➕', count: 13, desc: '13 từ: Add, Addition, Subtract, Subtraction, Sum, Difference, Equal to, Regroup...' },
-    { id: 'Place Value', title: 'Giá trị vị trí (Place Value)', icon: '🧱', count: 6, desc: '6 từ: Place value, Tens, Ones, Hundreds, Units, Base-ten system' },
-    { id: 'Measurement and Data', title: 'Đo lường & Dữ liệu (Measurement & Data)', icon: '📏', count: 16, desc: '16 từ: Length, Weight, Volume, Data, Chart, Graph, Measure, Time, Clock...' },
-    { id: 'Geometry', title: 'Hình học (Geometry)', icon: '📐', count: 14, desc: '14 từ: Geometry, Shape, Line, Perimeter, Area, Polygon, Circle, Square...' }
+    { id: 'Counting', title: 'Counting (Đếm)', icon: '🔢', count: 5, desc: '5 từ: Count, Numbers, Digits, Sequence, Total' },
+    { id: 'Addition and Subtraction', title: 'Addition and Subtraction (Phép cộng và Phép trừ)', icon: '➕', count: 13, desc: '13 từ: Add, Addition, Subtract, Subtraction, Sum, Difference, Equal to, Regroup...' },
+    { id: 'Place Value', title: 'Place Value (Giá trị vị trí)', icon: '🧱', count: 6, desc: '6 từ: Place value, Tens, Ones, Hundreds, Units, Base-ten system' },
+    { id: 'Measurement and Data', title: 'Measurement and Data (Đo lường và Dữ liệu)', icon: '📏', count: 16, desc: '16 từ: Length, Weight, Volume, Data, Chart, Graph, Measure, Measurement, Time...' },
+    { id: 'Geometry', title: 'Geometry (Hình học)', icon: '📐', count: 14, desc: '14 từ: Geometry, Shape, Line, Perimeter, Area, Polygon, Circle, Square...' }
   ];
 
   const grade2Subtopics = [
-    { id: 'Addition and Subtraction', title: 'Phép cộng & trừ (Addition & Subtraction)', icon: '➕', count: 14, desc: '14 từ: Addition, Subtraction, Sum, Difference, Number line, Mental math, Round...' },
-    { id: 'Place Value', title: 'Giá trị vị trí (Place Value)', icon: '🧱', count: 16, desc: '16 từ: Place value, Tens, Ones, Hundreds, Digit, Compare, Even, Odd, Pattern...' },
-    { id: 'Measurement and Data', title: 'Đo lường & Dữ liệu (Measurement & Data)', icon: '📏', count: 18, desc: '18 từ: Millimeter, Centimeter, Meter, Kilometer, Inch, Foot, Graphs, Line plots...' },
-    { id: 'Geometry', title: 'Hình học (Geometry)', icon: '📐', count: 16, desc: '16 từ: Geometry, Shape, Line, Angle, Perimeter, Area, Equal parts, Partition rectangles...' }
+    { id: 'Addition and Subtraction', title: 'Addition and Subtraction (Phép cộng và Phép trừ)', icon: '➕', count: 14, desc: '14 từ: Addition, Subtraction, Sum, Difference, Equal to, Regroup, Number line, Round...' },
+    { id: 'Place Value', title: 'Place Value (Giá trị vị trí)', icon: '🧱', count: 16, desc: '16 từ: Place value, Tens, Ones, Hundreds, Units, Base-ten system, Digit, Pattern...' },
+    { id: 'Measurement and Data', title: 'Measurement and Data (Đo lường và Dữ liệu)', icon: '📏', count: 18, desc: '18 từ: Length, Weight, Volume, Millimeter, Centimeter, Meter, Kilometer, Graphs...' },
+    { id: 'Geometry', title: 'Geometry (Hình học)', icon: '📐', count: 16, desc: '16 từ: Geometry, Shape, Line, Angle, Perimeter, Area, Equal parts, Partition rectangles...' }
   ];
 
   const currentSubtopics = selectedGrade === 1 ? grade1Subtopics : grade2Subtopics;
