@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { VoiceAccent, TopicId, UserStats } from './types';
 import { 
   getUserStats, 
@@ -236,6 +237,9 @@ export default function App() {
 
       {/* Global Footer */}
       <Footer onNavigateTab={setActiveTab} />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
