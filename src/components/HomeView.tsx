@@ -365,26 +365,26 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </section>
 
-      {/* DUAL BANNER: TEACHER TOOLKIT & LEARNING MATERIALS */}
+      {/* DUAL BANNER: LEARN FLASHCARDS & TEACHER TOOLKIT */}
       <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Learning Materials Card */}
+        {/* Flashcards & Print Card */}
         <div 
-          onClick={() => onNavigateTab('materials')}
+          onClick={() => onNavigateTab('learn')}
           className="cursor-pointer group bg-gradient-to-br from-emerald-500 to-teal-700 text-white rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between hover:scale-[1.01] transition-transform"
         >
           <div className="space-y-2.5">
             <span className="inline-flex items-center gap-1.5 bg-white/20 text-xs font-extrabold px-3 py-1 rounded-full">
-              📚 Học liệu Sư phạm
+              🎓 Học từ & Thẻ in A4
             </span>
             <h3 className="font-heading text-2xl font-bold">
-              Học Liệu & Phiếu In A4
+              Flashcards & Phiếu In A4
             </h3>
             <p className="text-emerald-100 text-xs sm:text-sm">
-              Flashcard trực quan, phiếu in cắt kéo A4 và chế độ trình chiếu Smartboard / máy chiếu cho lớp học.
+              Học từ vựng qua thẻ lật 3D có phát âm chuẩn bản ngữ và hỗ trợ in phiếu cắt thẻ flashcard khổ A4 trực tiếp.
             </p>
           </div>
           <div className="pt-4 flex items-center gap-2 text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
-            <span>Khám phá kho học liệu</span>
+            <span>Học & in thẻ flashcard</span>
             <ArrowRight className="w-4 h-4" />
           </div>
         </div>

@@ -10,11 +10,8 @@ import {
   BarChart2, 
   Menu, 
   X, 
-  Volume2, 
   Sparkles,
-  Layers,
-  FolderOpen,
-  ChevronDown
+  Layers
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -37,16 +34,14 @@ export const Navbar: React.FC<NavbarProps> = ({
   favoritesCount
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMaterialsDropdownOpen, setIsMaterialsDropdownOpen] = useState(false);
 
   const navItems = [
     { id: 'home', label: 'Trang chủ', icon: Home, badge: null },
     { id: 'dictionary', label: 'Từ điển', icon: BookOpen, badge: null },
     { id: 'grades', label: 'Lớp 1 – 2', icon: Layers, badge: null },
-    { id: 'learn', label: 'Học từ', icon: GraduationCap, badge: null },
+    { id: 'learn', label: 'Học từ', icon: GraduationCap, badge: 'In thẻ' },
     { id: 'games', label: 'Trò chơi', icon: Gamepad2, badge: '3 Game' },
-    { id: 'materials', label: 'Học liệu', icon: FolderOpen, badge: 'Mới' },
-    { id: 'teacher', label: 'Giáo viên', icon: UserCheck, badge: 'Sư phạm' },
+    { id: 'teacher', label: 'Giáo viên', icon: UserCheck, badge: '230 câu' },
     { id: 'favorites', label: 'Yêu thích', icon: Star, badge: favoritesCount > 0 ? favoritesCount : null },
     { id: 'stats', label: 'Tiến trình', icon: BarChart2, badge: null },
   ];
@@ -54,7 +49,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   const handleTabClick = (id: string) => {
     setActiveTab(id);
     setIsMobileMenuOpen(false);
-    setIsMaterialsDropdownOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -129,13 +123,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </span>
               </div>
               <p className="text-[11px] text-slate-500 font-medium hidden md:block">
-                Từ điển & Bộ công cụ Toán song ngữ Tiểu học
+                Từ điển & Bộ câu lệnh Toán song ngữ Tiểu học
               </p>
             </div>
           </div>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden xl:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeTab === item.id;
@@ -166,71 +160,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </button>
               );
             })}
-          </nav>
-
-          {/* Medium Screens (lg) Compact Navigation */}
-          <nav className="hidden lg:flex xl:hidden items-center gap-1">
-            {navItems.slice(0, 6).map((item) => {
-              const Icon = item.icon;
-              const isActive = activeTab === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handleTabClick(item.id)}
-                  className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                    isActive
-                      ? 'bg-amber-500 text-white shadow-xs'
-                      : 'text-slate-600 hover:text-amber-600 hover:bg-amber-50'
-                  }`}
-                >
-                  <Icon className="w-3.5 h-3.5" />
-                  <span>{item.label}</span>
-                </button>
-              );
-            })}
-
-            {/* More dropdown for remaining tabs */}
-            <div className="relative">
-              <button
-                onClick={() => setIsMaterialsDropdownOpen(!isMaterialsDropdownOpen)}
-                className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                  ['teacher', 'favorites', 'stats'].includes(activeTab)
-                    ? 'bg-indigo-600 text-white shadow-xs'
-                    : 'text-slate-600 hover:bg-slate-100'
-                }`}
-              >
-                <span>Khác</span>
-                <ChevronDown className="w-3.5 h-3.5" />
-              </button>
-
-              {isMaterialsDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-44 bg-white border border-slate-200 rounded-2xl shadow-xl p-1.5 z-50 space-y-1">
-                  {navItems.slice(6).map(item => {
-                    const Icon = item.icon;
-                    const isActive = activeTab === item.id;
-                    return (
-                      <button
-                        key={item.id}
-                        onClick={() => handleTabClick(item.id)}
-                        className={`w-full flex items-center justify-between p-2 rounded-xl text-xs font-bold transition-colors cursor-pointer ${
-                          isActive ? 'bg-amber-500 text-white' : 'text-slate-700 hover:bg-amber-50'
-                        }`}
-                      >
-                        <div className="flex items-center gap-2">
-                          <Icon className="w-4 h-4" />
-                          <span>{item.label}</span>
-                        </div>
-                        {item.badge !== null && (
-                          <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-amber-100 text-amber-800">
-                            {item.badge}
-                          </span>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
           </nav>
 
           {/* Mobile Menu Toggle Button */}

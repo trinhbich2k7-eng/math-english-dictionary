@@ -18,7 +18,6 @@ import { GradeCurriculumView } from './components/GradeCurriculumView';
 import { LearnFlashcards } from './components/LearnFlashcards';
 import { GamesView } from './components/GamesView';
 import { FavoritesView } from './components/FavoritesView';
-import { LearningMaterialsView } from './components/LearningMaterialsView';
 import { TeacherCorner } from './components/TeacherCorner';
 import { LearningDashboard } from './components/LearningDashboard';
 import { Footer } from './components/Footer';
@@ -207,14 +206,6 @@ export default function App() {
             onToggleLearned={handleToggleLearned}
             onTrackListen={handleTrackListen}
             onNavigateTab={setActiveTab}
-          />
-        )}
-
-        {activeTab === 'materials' && (
-          <LearningMaterialsView
-            accent={accent}
-            isSlow={isSlow}
-            onTrackListen={handleTrackListen}
           />
         )}
 
